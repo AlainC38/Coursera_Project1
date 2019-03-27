@@ -27,6 +27,8 @@ The objectives of the project are:
 5) From the data set in step 4, 
 - creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
+Final result is available in Syn_Results.txt
+
 Thanks for reviewing this project
 
 Alain
