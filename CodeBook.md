@@ -54,5 +54,15 @@ Part 2 - Extract only the mean and standard deviation:
 - a V3 column agregation "V"+ id of the seleted features is added to dataframe selnames to enable easy extraction
 - the dataframe sel_data is used to store the selcted data (i.e. mean and std) from dataframe data_all created in part 1
 
+Part 3 & 4 - Uses descriptive activity names & Appropriately labels the data
+============================================================================
+- colnames() function is used to rename columns of dataframe sel_data with the name of the selected features
+- activity_labels dataframe is used to store label of activitied from file 'activity_labels.txt'
+- column id_record is added to to dataframe activity_all to secure the order/integrity of data after the ucoming merge()
+- merge() function is used to translate 'class of activities' (V1 column of activity_all) of to a meaningful 'label of activity' (column  V1 of activity_labels). The result is stored in activity_all_label data frame
+- colnames() is used to rename columns of activity_all_label data as "id_record" and "Lbl_Activity"
+- cbind() function is used to add a the activities(activity_all_label) for all data selected (sel_data) --> activity_label_data dataframe
+- Finally cbind() is used again to add Id of subject (subject_all) to activity/data already processed --> subject_label_data dataframe
 
-
+As a result of all those steps, the result is available in subject_label_data dataframe with the related columns
+- 
