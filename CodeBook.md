@@ -46,10 +46,13 @@ Part 1 - Merge DataSets:
 - rbind() function is used to merge the 3 training and test datasets
 - the merged dataframe are: data_all, activity_all, subject_all
 
-Part 2 - Extracts only the mean and standard deviation:
+Part 2 - Extract only the mean and standard deviation:
 =======================================================
 - col_names dataframe id used to store the names of the 561 features from the file 'features.txt'
 - grepl() function is used to select features including mean() or std() in their names (V2 column from col_names dataframe)
 - sel_names dataframe is used to store the features related to mean and standard deviation (rbind of the 2 previous selections)
+- a V3 column agregation "V"+ id of the seleted features is added to dataframe selnames to enable easy extraction
+- the dataframe sel_data is used to store the selcted data (i.e. mean and std) from dataframe data_all created in part 1
+
 
 
