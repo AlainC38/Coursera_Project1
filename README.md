@@ -1,5 +1,6 @@
 # Coursera_Project1
 Getting and Cleaning Data / Final project
+
 This project is using a dataset related to Human Activity Recognition Using Smartphones Dataset (UCI HAR Dataset)
 
 The dataset must be accessible from the computer you run the R script
