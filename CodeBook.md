@@ -20,7 +20,25 @@ The dataset includes the following files:
 - 'test/y_test.txt': Test labels (class of activity for the 2947 records above)
 - 'test/subject_test.txt': Id of subjects for the 2947 records ablove)
 
-Notes: 
-======
 - Features are normalized and bounded within [-1,1].
 - Each feature vector is a row on the text file.
+
+Documentation about the script in R:
+=========================================
+The requirements are the following:
+1) Merges the training and the test sets to create one data set.
+2) Extracts only the measurements on the mean and standard deviation for each measurement.
+3) Uses descriptive activity names to name the activities in the data set
+4) Appropriately labels the data set with descriptive variable names.
+5) From the data set in step 4, 
+- creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+Part 1:
+=======
+- library dplyr is loaded to enable data manipulation
+- Data are read from the txt files from training and test sets
+- a column 'set' is added to identify the source data set and allow some possible debug analysis
+- the dataframe used are: data_train, data_test, activity_train, activity_test, subject_train, subject_test
+- rbind() function is used to merge the 3 training and test datasets
+- the merged dataframe are: data_all, activity_all, subject_all
+
