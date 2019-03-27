@@ -1,9 +1,13 @@
 This CodeBook describes the variables, the data, and any transformations or work that are performed to clean up the data.
 
 About the data (Human Activity Recognition Using Smartphones Dataset):
+
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years.
+
 Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope.
+
 Data we captured  are 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz.
+
 Obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
 
 The dataset includes the following files:
@@ -33,12 +37,19 @@ The requirements are the following:
 5) From the data set in step 4, 
 - creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-Part 1:
-=======
+Part 1 - Merge DataSets:
+========================
 - library dplyr is loaded to enable data manipulation
 - Data are read from the txt files from training and test sets
 - a column 'set' is added to identify the source data set and allow some possible debug analysis
-- the dataframe used are: data_train, data_test, activity_train, activity_test, subject_train, subject_test
+- the dataframe used to store data are: data_train, data_test, activity_train, activity_test, subject_train, subject_test
 - rbind() function is used to merge the 3 training and test datasets
 - the merged dataframe are: data_all, activity_all, subject_all
+
+Part 2 - Extracts only the mean and standard deviation:
+=======================================================
+- col_names dataframe id used to store the names of the 561 features from the file 'features.txt'
+- grepl() function is used to select features including mean() or std() in their names (V2 column from col_names dataframe)
+- sel_names dataframe is used to store the features related to mean and standard deviation (rbind of the 2 previous selections)
+
 
