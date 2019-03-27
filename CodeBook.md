@@ -65,4 +65,14 @@ Part 3 & 4 - Uses descriptive activity names & Appropriately labels the data
 - Finally cbind() is used again to add Id of subject (subject_all) to activity/data already processed --> subject_label_data dataframe
 
 As a result of all those steps, the result is available in subject_label_data dataframe with the related columns
-- 
+- "Id_Subject": Id of the subject who provided the data
+- "Lbl_Activity": label of the activity recorded (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
+- List of features provided as mean or standard deviation
+
+Part 5 - tidy data set with the average of each variable for each activity and each subject
+===========================================================================================
+- group_by() function is used to group data in subject_label_data dataframe by Lbl_Activity, Id_Subject
+- summarise_all () function is used to calculate mean for all features/variable
+- The result is hosted in dataframe Syn_Results
+
+
